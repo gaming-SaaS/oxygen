@@ -12,21 +12,18 @@ import {
 import { UsersService } from "./users.service";
 import { CreateUserDto } from "./dto/create-user.dto";
 import { UpdateUserDto } from "./dto/update-user.dto";
-import { JwtAuthGuard } from "src/auth/jwt-auth.guard";
-import { LocalAuthGuard } from "src/auth/local-auth.guard";
-// import { AuthService } from 'src/auth/auth.service';
+import { JwtAuthGuard, LocalAuthGuard, AuthService } from "@gaming-saas/nest-plus";
 
 @Controller("users")
 export class UsersController {
   constructor(
-    private readonly usersService: UsersService
-  ) // private readonly authService: AuthService
-  {}
+    private readonly usersService: UsersService,
+    private readonly authService: AuthService) { }
 
   @UseGuards(LocalAuthGuard)
   @Post("auth/login")
   async login(@Request() req) {
-    return null; // this.authService.login(req.user);
+    return this.authService.login(req.user);
   }
 
   @Post()

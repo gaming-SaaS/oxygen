@@ -16,21 +16,9 @@ export class UsersService {
   findOne(id: number) {
     return `This action returns a #${id} user`;
   }
-  private readonly users = [
-    {
-      userId: 1,
-      username: "john",
-      password: "changeme",
-    },
-    {
-      userId: 2,
-      username: "maria",
-      password: "guess",
-    },
-  ];
 
-  async findOneByUsername(username: string): Promise<User | undefined> {
-    return this.users.find((user) => user.username === username);
+  async findOneByUsername(username: string) {
+    return 'this.users.find((user) => user.username === username);'
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
