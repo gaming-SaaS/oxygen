@@ -21,10 +21,10 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@gaming-saas/nest-plus": "git+https://git@github.com/gaming-SaaS/nest-plus.git",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/mapped-types": "*",
+    "nest-plus": "^1.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
