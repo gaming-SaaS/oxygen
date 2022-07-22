@@ -6,7 +6,7 @@
   "private": true,
   "license": "MIT License",
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist; npm run --prefix  ./node_modules/@gaming-saas/nest-plus build;",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -21,7 +21,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@gaming-saas/nest-plus": "file:../nest-plus",
+    "@gaming-saas/nest-plus": "git+https://git@github.com/gaming-SaaS/nest-plus.git",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/mapped-types": "*",
